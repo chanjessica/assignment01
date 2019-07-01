@@ -14,6 +14,7 @@ $(function () {
 	const input3 = $('.input3'), three = $('.submit3'), resultFind = $('.find');
 	const input4 = $('.input4'), four = $('.submit4'), resultSome = $('.Some');
 	const five=$('.submit5'),resultSort=$('.sort');
+	const input6 = $('.input6'), six = $('.submit6'), resultEach = $('.forEach');
     
 	one.on('click', function () {
 			// Verify the user gave us a real number
@@ -43,7 +44,7 @@ $(function () {
         if (!isNaN(num)) {
 			// returns the value of the first element in the array that greater than the provided number
 			const result=data.find(v => v > num);
-			console.log(`FIND result ${result}`);
+			//console.log(`FIND result ${result}`);
 			resultFind.text("Find Method - returns the value of the first element in the array that greater than the provided number:" +result);
 			input3.val('');
         }
@@ -55,17 +56,26 @@ $(function () {
         if (!isNaN(num)) {
 			// return true if at least one element in the array is greater than the provided numer
 			const result=data.some(v => v > num);
-			console.log(`SOME result ${result}`);
+			//console.log(`SOME result ${result}`);
 			resultSome.text("Some Method - return true if at least one element in the array is greater than the provided numer:" +result);
 			input4.val('');
         }
     });
 	
-		five.on('click', function () {
-			console.log(`data ${data}`);
-			// sorts the elements of an array
-			const result=data.sort();
-			console.log(`SORT result ${result}`);
-			resultSort.text("Sort Method - sorts the elements of an array:" +result);
-    });
+	five.on('click', function () {
+		console.log(`data ${data}`);
+		// sorts the elements of an array
+		const result=data.sort();
+		//console.log(`SORT result ${result}`);
+		resultSort.text("Sort Method - sorts the elements of an array:" +result);
+	});
+	/*
+	six.on('click', function(){
+		const num = parseInt(input6.val());
+		console.log(`num ${num}`);
+		const result=data.forEach(v); 
+		console.log(`EACH result ${result}`);
+		resultEach.text(`EACH result ${result}`);
+	})
+*/
 });
