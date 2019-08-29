@@ -1,6 +1,6 @@
-# nuxt-starter
+# hw9
 
-> final project
+> My laudable Nuxt.js project
 
 ## Build Setup
 
