@@ -1,23 +1,21 @@
 
 export default {
   mode: 'universal',
-  /*
-  ** Headers of the page
-  */
+        /*** Headers of the page */
   head: {
-    title: process.env.npm_package_name || '',
+        title: 'Fast Food | Fast Chinese Food | Kong Kong Style Chinese Food | MyKitchen Chinese Resturant',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: "Welcome to our Chinese kitchen. Kowloon Express prepares American Chinese food fresh from the wok, from our signature Orange Chicken to bold limited time offerings" },
+      { hid: 'keywords', name: 'keywords', content: "Fast Food, Fast Chinse Food, Chinese Food, Chinese Restaurant" }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: "canonical", href: 'https://peaceful-lumiere-f1eb78.netlify.com/API'}
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
+      /* ** Customize the progress-bar color */
   loading: { color: '#fff' },
   /*
   ** Global CSS
