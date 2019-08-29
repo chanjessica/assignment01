@@ -1,9 +1,8 @@
 <template>
    <div id='app'>
-      <h2 class="mt-4 text-center">{{ message }}</h2>
-        <p>Numbre of Orders: {{counter}}</P>
+       
       <!-- this page use BootstrapVue Grid system  -->
-      <b-container class="bv-example-row">
+      <b-container class="container">
       <b-row>
            <!-- 1st column -->
          <b-col md  id="e1" > 
@@ -11,7 +10,7 @@
             <div class="entrees" id="e3">
                <div v-for = "food in rice" :key="food.id">
                  {{ food.item }} - ${{ food.price}} <br>
-                    <button v-on:click ="order">Order </button>
+                    <button v-on:click ="order( food.price )">Order </button>
                </div>
             </div>
          </b-col>
@@ -21,7 +20,7 @@
             <div class="entrees" id="e4">
                <div v-for = "food in beef" :key="food.id">
                  {{ food.item }} - ${{ food.price}} <br>
-                    <button v-on:click ="order">Order </button>
+                    <button v-on:click ="order( food.price )">Order </button>
                </div>
             </div>
          </b-col>
@@ -30,7 +29,7 @@
             <h4>Checken</h4>
                <div v-for = "food in chicken" :key="food.id">
                  {{ food.item }} - ${{ food.price}}   <br>
-                    <button v-on:click ="order">Order </button>
+                    <button v-on:click ="order( food.price )">Order </button>
                </div>
          </b-col>
            <!-- 4th column -->
@@ -39,7 +38,7 @@
             <div class="entrees" id="e2">
                <div v-for = "food in pork" :key="food.id"> 
                  {{ food.item }} - ${{ food.price}}  <br>
-                    <button v-on:click ="order(8.9 )">Order </button>
+                    <button v-on:click ="order(food.price )">Order </button>
                </div>
             </div>
          </b-col>
@@ -47,9 +46,12 @@
       </b-container>
 
       <footer class="my-5">
+         <h3 class="mt-4 text-center"> Total Numbre of Orders: {{counter}} </h3>
+          <h3 class="mt-4 text-center"> Total Cost: ${{ total }}</h3>
+     
          <!-- ######  COLLAPSE  #######-->
-         <h4 class="mt-5 text-center"> </h4>
-         <div class="container justify-content-center">
+         <h4> </h4>
+         <div class="center-container">
             <!-- <button class="btn btn-success d-block mb-4" v-on:click="payment"> -->
              <button class="btn btn-success d-block mb-4" >
                 <a v-bind:href="link" target="_blank">Payment </a>
@@ -96,21 +98,31 @@
          order: function(price){ 
             this.counter++; 
             this.total += price;
+            console.log (price);
+            console.log(this.total);
+
          } 
-      //    ,
-      //    payment: function(){
-      //       this.total;
       }
    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped> 
+   .container {
+      margin-top: 2rem;
+      justify-content: center;
+   }
+   .container {
+      justify-content: center;
+   }
+   h4 {
+      color: purple;
+   }
    p{
       color: red;
       font-size: 2rem;
    }
-   #e1 {
+   /* #e1 {
       background: gold;
    }
    #e2 {
@@ -121,7 +133,7 @@
    }
    #e4{
       background: yellow; 
-   }
+   } */
 </style>
 
 

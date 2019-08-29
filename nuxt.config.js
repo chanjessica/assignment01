@@ -3,12 +3,12 @@ export default {
   mode: 'universal',
         /*** Headers of the page */
   head: {
-        title: 'Fast Food | Fast Chinese Food | Kong Kong Style Chinese Food | MyKitchen Chinese Resturant',
+        title: "Jessica's Kitchen",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: "Welcome to our Chinese kitchen. Kowloon Express prepares American Chinese food fresh from the wok, from our signature Orange Chicken to bold limited time offerings" },
-      { hid: 'keywords', name: 'keywords', content: "Fast Food, Fast Chinse Food, Chinese Food, Chinese Restaurant" }
+      { hid: 'keywords', name: 'keywords', content: "Authentic Chinese, Fast Food, Fast Chinse Food, Chinese Food, Chinese Restaurant" }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
