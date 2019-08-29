@@ -21,6 +21,9 @@
 </template>
 
 <style scoped>
+    *{
+        font-size: 2rem;
+    }
     .header{
         background: gray;
         width: 100%;

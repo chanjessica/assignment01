@@ -47,7 +47,7 @@
 
       <footer class="my-5">
          <h3 class="mt-4 text-center"> Total Numbre of Orders: {{counter}} </h3>
-          <h3 class="mt-4 text-center"> Total Cost: ${{ total }}</h3>
+          <h3 class="mt-4 text-center"> Total Cost: ${{ total | twoDec }}</h3>
      
          <!-- ######  COLLAPSE  #######-->
          <h4> </h4>
@@ -69,7 +69,6 @@
          return {
             counter:0,
             total:0,
-            message: " BootstrapVue Grid",
             link: './contact',
             rice : [
                      {id:0, item: "Stream Rice", price: 1.95 },
@@ -102,8 +101,13 @@
             console.log(this.total);
 
          } 
+      },
+      filters: { 
+         twoDec(v){
+            return v.toFixed(2);
       }
    }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
