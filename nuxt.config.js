@@ -1,10 +1,12 @@
-
 export default {
   messages: {
     loading: 'Coming up.........',
-    error_404: 'This page not found',
+    error_404: 'Sorry! This page not found',
     server_error: 'Server error',
     back_to_home: 'Back HOME'
+  },
+  generate: {
+    fallback: true
   },
   mode: 'universal',
         /*** Headers of the page */
