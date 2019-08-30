@@ -17,7 +17,13 @@
                 <nuxt-link to="/API">API</nuxt-link>
             </li>
         </ul>
-    </header> 
+            <!-- share facebook -->
+        <div class="fb-share-button" data-href="https://www.pandaexpress.com/" data-layout="button_count" data-size="large">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.pandaexpress.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+        </div>
+
+   </header> 
+    
 </template>
 
 <style scoped>
