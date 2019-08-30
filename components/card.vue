@@ -22,20 +22,23 @@ export default {
 </script>
 <style lang="scss">
 .card {
-    margin: 1rem;
+    margin: 1rem auto;
     border: 1px solid #000;
     padding: 1.5 rem;
     max-width: 500px;
-    min-height: 200px;
+    min-height: 150px;
     // height: 200px;
     &__name{ 
+        text-align: center;
         background-color: gray;
         font-weight: bold;
         display: block;
         margin-bottom: 1rem;
     }
     &__detail{
+        color: purple;
         font-size: 1rem;
+        padding-left: 2rem;
         margin-bottom: .25rem;
     }
 }

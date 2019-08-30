@@ -3,7 +3,7 @@
       <h1 class="heading"> Customer Information</h1>
       <hr>
         <section  v-if="info">
-          <customerCard v-for="user in info"  :key="user.id"    :user="user"/>
+          <customerCard class="card" v-for="user in info"  :key="user.id"    :user="user"/>
         </section>
   </div>
 </template>
@@ -39,3 +39,9 @@ export default{
     }
 }
 </script>
+<style scoped>
+    .heading {
+       text-align: center;
+    }
+
+</style>
