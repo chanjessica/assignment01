@@ -1,5 +1,11 @@
 
 export default {
+  messages: {
+    loading: 'Coming up.........',
+    error_404: 'This page not found',
+    server_error: 'Server error',
+    back_to_home: 'Back HOME'
+  },
   mode: 'universal',
         /*** Headers of the page */
   head: {
