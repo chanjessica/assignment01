@@ -5,6 +5,7 @@ export default {
     server_error: 'Server error',
     back_to_home: 'Back HOME'
   },
+      /*** Error page */
   generate: {
     fallback: true
   },
