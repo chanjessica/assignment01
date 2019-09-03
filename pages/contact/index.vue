@@ -1,18 +1,17 @@
 <template>
     <div>
-        <small> /pages/contact/index.vue</small>
         <!-- SLOT -->
         <div id="slot">
           <app-quote>
             <h2 slot="title"> {{ quoteTitle | toUpper}}  </h2>   
             <P slot="content"> {{ quoteContent | toLower}}</P>
             <p>Call us at (206)123-4567</p>
-        </app-quote>
+          </app-quote>
         <router-view></router-view>
-        <div class="menu">
+        <!-- <div class="menu">
             Type in what you are looking for.<br> e.g. Chicken <input v-model="filterFood"> 
         <ul><li v-for="(food, index) in filterMenu" v-bind:key="index"> {{ food }} </li></ul>
-        </div>
+        </div> -->
         <div  v-if="imgList"> 
               <!-- whatever bind to the v-bind is the info passing to the child component -->
         <app-home v-for="img in imgList"  v-bind:title="pageTitle" v-bind:imgData="img" v-bind:key="img.id">
@@ -28,7 +27,7 @@
             <h2 class="mt-4 text-center" >modals </h2>
             <b-button v-b-modal.modal-1>FeedBack</b-button>
              <!-- Modal body -->
-            <b-modal id="modal-1" title="Thank You!">
+            <b-modal id="modal-1" title="Please provide your contact information">
                 <form>
                     <div class="form-group">
                         <label class="mt-3">Name</label>
@@ -76,19 +75,26 @@
             </b-tooltip>
 
             <!-- Tooltip for an element identified by ref -->
-            <b-tooltip :target="() => $refs['button-3']" title="Alternative!"></b-tooltip>
-        
+            <b-tooltip :target="() => $refs['button-3']" title="Alternative!"></b-tooltip>       
         </b-container>
+        <small> /pages/contact/index.vue</small>
     </div>  
 </template>
 
 <script>
-import Quote from '@/components/Quote.vue';
+  import imgList from '@/components/img/imgList.vue';
+  import slotMsg from '@/components/Quote.vue'
+  
   export default {
-      name: "contact",
+    name: "contact",
+    components:{
+      appQuote: slotMsg
+    },
       data(){
           return {
-              login: false
+              login: false,
+              quoteTitle : 'This page is under construction!',
+              quoteContent: 'Sorry for the inconvenience '
           };
       }
   }
@@ -100,17 +106,18 @@ body {
     min-height: 100vh;
     background: rgb(224, 207, 210);
 }
- #slot {
-   margin-top: 0;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: black ;
-  background: plum;
-  margin-top: 60px;
-}
+
 .menu {
   text-align: left;
+}
+#slot{
+  width: 50%;
+  height: 100px;
+  min-height: 100vh;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin: auto;;
 }
 </style>
