@@ -1,6 +1,5 @@
 <template>
   <div role="tablist">
-      <h1> pages/blog/index.vue</h1>
   <div  v-for="(t, index) in texts"  :key="index">
     <b-card no-body class="mb-1">
       <b-card-header header-tag="header" class="p-1" role="tab">
@@ -17,6 +16,7 @@
       </b-collapse>
     </b-card>
   </div>
+      <small> pages/blog/index.vue</small>
   </div>
 </template>
 
